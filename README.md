@@ -5,4 +5,7 @@ Quarter 2 Repository first required activity
 Name: Dency Alexa B. Bartolabac
 
 
-Grade and Section: 9 - Helium PSHS - Central Visayas in Cebu
+Grade and Section: 9 - Helium 
+
+
+School: PSHS - Central Visayas in Cebu
