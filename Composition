@@ -1,0 +1,17 @@
+class Engine:
+    def __init__(self, horsepower):
+        self.horsepower = horsepower
+
+class Car:
+    def __init__(self, brand, horsepower):
+        self.brand = brand
+        # Composition: Engine is created *inside* the Car. 
+        # If the Car is destroyed, the Engine goes with it.
+        self.engine = Engine(horsepower)
+
+    def get_details(self):
+        return f"{self.brand} car with {self.engine.horsepower} HP engine."
+
+my_car = Car("Tesla", 450)
+print(my_car.get_details())
+# Output: Tesla car with 450 HP engine.

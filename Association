@@ -1,0 +1,18 @@
+class Professor:
+    def __init__(self, name):
+        self.name = name
+
+class University:
+    def __init__(self, name):
+        self.name = name
+        self.professors = []  # University has a list of Professors
+
+    def hire_professor(self, prof: Professor):
+        self.professors.append(prof)
+
+prof1 = Professor("Dr. Smith")
+uni = University("State Tech")
+uni.hire_professor(prof1)
+
+print(f"{uni.name} hired {uni.professors[0].name}")
+# Output: State Tech hired Dr. Smith

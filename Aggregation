@@ -1,0 +1,22 @@
+class Player:
+    def __init__(self, name):
+        self.name = name
+
+class Team:
+    def __init__(self, team_name, players=None):
+        self.team_name = team_name
+        self.players = players if players else []  # Team aggregates Players
+
+    def add_player(self, player: Player):
+        self.players.append(player)
+
+# Players exist independently of the team
+p1 = Player("Alice")
+p2 = Player("Bob")
+
+team = Team("FC Python")
+team.add_player(p1)
+team.add_player(p2)
+
+print(f"Team {team.team_name} has players: {[p.name for p in team.players]}")
+# Output: Team FC Python has players: ['Alice', 'Bob']

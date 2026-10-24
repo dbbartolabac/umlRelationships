@@ -1,0 +1,17 @@
+# Parent Class (Superclass)
+class Appliance:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def turn_on(self):
+        return f"The {self.brand} appliance is now ON."
+
+# Child Class (Subclass) inheriting from Appliance
+class WashingMachine(Appliance):
+    def spin(self):
+        return f"The {self.brand} washing machine is spinning cycles."
+
+# Usage
+my_washer = WashingMachine("Whirlpool")
+print(my_washer.turn_on())  # Inherited from Appliance
+print(my_washer.spin())     # Defined in WashingMachine

@@ -1,0 +1,15 @@
+# Dependency
+class WeatherReport:
+    def get_forecast(self):
+        return "Sunny and 25°C"
+
+class Phone:
+    # Phone depends on WeatherReport temporarily via method parameter
+    def display_weather(self, weather_report: WeatherReport):
+        forecast = weather_report.get_forecast()
+        return f"Displaying on screen: {forecast}"
+
+report = WeatherReport()
+phone = Phone()
+print(phone.display_weather(report))
+# Output: Displaying on screen: Sunny and 25°C
